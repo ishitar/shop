@@ -18,10 +18,7 @@ if (process.env.NODE_ENV === 'production') {
       });
 
 }
-app.get("/", (req,res)=>{
-    res.send("It works!!!");
-    console.log("Get is working");
-})
+
 //app.use(cors());
 const corsOptions = {
     origin: 'https://stormy-island-65192.herokuapp.com/',
@@ -29,7 +26,11 @@ const corsOptions = {
   }
   app.use(cors(corsOptions));
   app.options('*', cors());
-app.post("/payment",(req,res)=>{
+  app.get("/", cors(),(req,res)=>{
+    res.send("It works!!!");
+    console.log("Get is working");
+})
+app.post("/payment",cors(),(req,res)=>{
     const {product, token} = req.body;
     console.log("Product", product);
     console.log("Price", product.price);
