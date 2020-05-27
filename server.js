@@ -27,7 +27,7 @@ const corsOptions = {
   app.use(cors(corsOptions));
   app.options('*', cors());
   app.get("/", cors(),(req,res)=>{
-    res.send("It works!!!");
+    //res.send("It works!!!");
     console.log("Get is working");
 })
 app.post("/payment",cors(),(req,res)=>{
