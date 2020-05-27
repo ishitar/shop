@@ -22,7 +22,13 @@ app.get("/", (req,res)=>{
     res.send("It works!!!");
     console.log("Get is working");
 })
-app.use(cors());
+//app.use(cors());
+const corsOptions = {
+    origin: 'https://stormy-island-65192.herokuapp.com/',
+    optionsSuccessStatus: 200
+  }
+  app.use(cors(corsOptions));
+  app.options('*', cors());
 app.post("/payment",(req,res)=>{
     const {product, token} = req.body;
     console.log("Product", product);
