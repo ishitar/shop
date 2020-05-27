@@ -4,6 +4,8 @@ import Title from './Title';
 import { ProductConsumer } from '../context';
 
 export default class ProductList extends Component {
+    componentDidMount() {    this.connecToServer();  }
+    connecToServer() {    fetch('/');  }
     render() {
 
         return (
