@@ -1,0 +1,49 @@
+:root{
+  --mainBlue: #278bc9;
+  --lightBlue:#a9cade;
+  --mainWhite:#f3f3f3;
+  --mainDark:#503309;
+  --mainYellow:#fff718;
+  --mainRed:#278bc9;
+  
+}
+
+body{
+  font-family: "Oswald", sans-serif !important; /*bootstrap is overriding, so include imp tag*/
+  background: var(--mainWhite) !important;
+  color:var(--mainDark) !important;
+}
+
+.text-title{
+  font-family: 'Quicksand', cursive; /*no need to include imp tag since it's a custom class*/
+  letter-spacing: 0.3rem;
+  text-transform: uppercase;
+}
+
+.text-blue{
+  color:var(--mainBlue);
+}
+
+.text-bright{
+  color:var(--lightBlue);
+}
+
+.btn-black{
+  background:transparent;
+  text-transform: capitalize;
+  font-size: 0.8rem !important;
+  color:var(--mainDark);
+  border-radius: 0 !important;
+  border:0.1rem solid var(--mainDark) !important;
+}
+
+.btn-black:hover{
+  background: var(--mainDark) !important;
+  color: var(--mainWhite) !important;
+}
+
+.cart-icon{
+  cursor: pointer;
+  font-size: 1.2rem;
+  color: var(--mainYellow);
+}

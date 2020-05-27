@@ -1,0 +1,30 @@
+{
+  "name": "shopping",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "cd client && npm run build",
+    "install-client": "cd client && npm install",
+    "heroku-postbuild": "npm run install-client && npm run build",
+    "start": "node server.js",
+    "client": "cd client && npm start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ishitar/shopping.git"
+  },
+  "author": "Ishita Roy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ishitar/shopping/issues"
+  },
+  "homepage": "https://github.com/ishitar/shopping#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "nodemon": "^2.0.4",
+    "stripe": "^8.52.0",
+    "uuid": "^8.0.0"
+  }
+}
