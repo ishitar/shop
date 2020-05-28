@@ -26,5 +26,6 @@
     "nodemon": "^2.0.4",
     "stripe": "^8.52.0",
     "uuid": "^8.0.0"
-  }
+  },
+  "proxy": "http://localhost:3000/"
 }
