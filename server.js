@@ -5,7 +5,7 @@ const app = express();
 const stripe = require('stripe')("sk_test_NoyOCnlCTQrSWnCMVF9RJY3b00WSeEPIeG");
 const uuid = require('uuid/v4');
 
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 8080;
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
