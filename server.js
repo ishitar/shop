@@ -5,19 +5,19 @@ const app = express();
 const stripe = require('stripe')("sk_test_NoyOCnlCTQrSWnCMVF9RJY3b00WSeEPIeG");
 const uuid = require('uuid/v4');
 
-const port = process.env.PORT || 8080;
+const port = process.env.PORT || 5000;
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
-if (process.env.NODE_ENV === 'production') {
+//if (process.env.NODE_ENV === 'dev') {
     app.use(express.static('client/build'));
     app.get('/*', (req, res) => {
 
         console.log('hi from app.get');
-        res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
+        res.sendFile(path.join(__dirname, 'client', 'build', 'index.html'));
       });
 
-}
+//}
 
 //app.use(cors());
 const corsOptions = {

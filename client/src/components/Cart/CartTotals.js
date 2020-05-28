@@ -9,7 +9,7 @@ export default function CartTotals({value}) {
          const body = {token,cartTotal}
          const headers = { "Content-Type": "application/json"}
 
-         return fetch("https://stormy-island-65192.herokuapp.com/payment",{
+         return fetch("/payment",{
              method:"POST",
              headers,
              body:JSON.stringify(body)
